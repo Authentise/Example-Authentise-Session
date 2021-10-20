@@ -85,7 +85,9 @@ def parse_args() -> argparse.Namespace:
 
 
 def main(username: str, password: str, base_url: str) -> None:
-    asyncio.run(follow_event_stream(username, password, base_url, PrintEventHandler()))
+    futures = [follow_event_stream(username, password, base_url, PrintEventHandler())]
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(asyncio.wait(futures))
 
 
 if __name__ == '__main__':
