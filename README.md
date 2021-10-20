@@ -14,4 +14,4 @@
 - To test uploading a model and retrieving info about that model:
 `python3 UploadAndFetchModel.py user@email.com 'User Password!' 10x40mmtower.stl 'environment' `
 
-- (Tomer Heber) To extract stream events in async manner (Python 3.8+): `python FollowEventStreamExample.py --username <username> --password <password>`  (pip3 install -r requirements.txt)
+- (Tomer Heber) To extract stream events in an asynchronous way: `python AsyncStreamReaderLoggingExample.py --username <username> --password <password>`  (pip3 install -r requirements.txt)
